@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TermoTabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="topo">
+
+        <img src="assets/among-10.png" class="among">
+
+        <div class="tentativas">
+            <p>TENTATIVAS</p>
+            <span id="numero">1</span>/6
+        </div>
+
+        <button id="reiniciar">
+            <img src="assets/return.png">
+        </button>
+
+    </div>
+
+
+    <p class="texto">
+        Adivinhe a palavra secreta de 5 letras.
+    </p>
+
+
+    <div class="jogo">
+
+        <input
+            type="text"
+            id="palavra"
+            maxlength="5"
+            placeholder="Acerte a senha"
+        >
+
+        <button id="enviar">
+            ENVIAR
+        </button>
+
+
+        <div id="tabuleiro"></div>
+
+    </div>
+
+
+    <div id="resultado">
+
+        <button id="fechar">
+            <img src="assets/close.png">
+        </button>
+
+        <h1 id="titulo"></h1>
+
+        <img
+            src="assets/among-10.png"
+            class="among-resultado"
+        >
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,328 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #071a2c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.topo {
+    height: 165px;
+    border-bottom: 2px solid #102c45;
+    position: relative;
+}
+
+
+.among {
+    width: 90px;
+    height: 90px;
+
+    position: absolute;
+
+    left: calc(50% - 145px);
+    top: 50px;
+
+    object-fit: contain;
+}
+
+
+.tentativas {
+    width: 190px;
+    height: 105px;
+
+    position: absolute;
+
+    left: 50%;
+    top: 18px;
+
+    transform: translateX(-50%);
+
+    background: #071a2c;
+
+    border: 2px solid #102c45;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+
+.tentativas p {
+    margin: 12px 0 0;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #b7c5cf;
+}
+
+
+.tentativas span {
+    color: #15c96b;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+
+.tentativas {
+    color: #58738b;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+#reiniciar {
+    position: absolute;
+
+    right: 20px;
+    top: 17px;
+
+    width: 38px;
+    height: 38px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+#reiniciar img {
+    width: 100%;
+}
+
+.texto {
+    text-align: center;
+
+    color: #9aaab8;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-top: -27px;
+}
+
+.jogo {
+    width: 305px;
+
+    margin: 30px auto;
+
+    padding: 15px;
+
+    border: 2px solid #102e48;
+    border-radius: 15px;
+
+    background: #071a2c;
+}
+
+#palavra {
+    width: 100%;
+    height: 38px;
+
+    background: #06182a;
+
+    border: 2px solid #294761;
+    border-radius: 8px;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    outline: none;
+
+    text-transform: uppercase;
+}
+
+
+#enviar {
+    width: 100%;
+    height: 30px;
+
+    margin-top: 12px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #314a65;
+
+    color: #071421;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#tabuleiro {
+    margin-top: 14px;
+
+    display: grid;
+
+    gap: 7px;
+}
+
+
+.linha {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 7px;
+}
+
+
+.celula {
+    height: 45px;
+
+    border: 2px solid #17354f;
+    border-radius: 9px;
+
+    background: #06182a;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.certa {
+    background: #18a957;
+    border-color: #18a957;
+}
+
+
+.existe {
+    background: #d5aa20;
+    border-color: #d5aa20;
+}
+
+
+.errada {
+    background: #30465a;
+    border-color: #30465a;
+}
+
+
+#resultado {
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        url("assets/background-victory.png");
+
+    background-size: cover;
+    background-position: center;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    z-index: 10;
+}
+
+
+#resultado.derrota {
+    background-image:
+        url("assets/background-defeat.png");
+}
+
+
+#resultado h1 {
+    color: #00d9f0;
+    font-size: 45px;
+}
+
+
+#resultado.derrota h1 {
+    color: red;
+}
+
+
+.among-resultado {
+    width: 150px;
+}
+
+
+#fechar {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+
+#fechar img {
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .topo {
+        height: 165px;
+    }
+
+    .among {
+        width: 90px;
+        height: 90px;
+
+        left: calc(50% - 140px);
+        top: 65px;
+    }
+
+    .tentativas {
+        width: 205px;
+        height: 110px;
+    }
+
+    .tentativas p {
+        font-size: 20px;
+    }
+
+    .tentativas span {
+        font-size: 50px;
+    }
+
+    .jogo {
+        width: calc(100% - 80px);
+        max-width: 310px;
+    }
+
+    .celula {
+        height: 55px;
+        font-size: 25px;
+    }
+
+}
+
+
