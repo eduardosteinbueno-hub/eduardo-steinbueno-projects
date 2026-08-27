@@ -141,29 +141,6 @@ function jogar() {
         tentativa + 1;
 }
 
-function mostrarResultado(ganhou) {
-
-    resultado.style.display = "flex";
-
-
-    if (ganhou) {
-
-        titulo.innerText = "Vitória";
-
-        resultado.classList.remove(
-            "derrota"
-        );
-
-    } else {
-
-        titulo.innerText = "Derrota";
-
-        resultado.classList.add(
-            "derrota"
-        );
-    }
-}
-
 enviar.onclick = jogar;
 
 
